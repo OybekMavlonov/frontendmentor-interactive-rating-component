@@ -8,7 +8,9 @@ for (let i = 1; i <= 5; i++) {
     const button = document.createElement('button');
 
     // Add Tailwind classes
-    button.className = `sm:w-12 w-10 sm:h-12 h-8 bg-blue-750 rounded-full shadow-2xl flex items-center justify-center text-grey text-sm sm:text-base text-center font-bold font-overpass hover:bg-orange hover:text-blue-900`;
+    button.className = `sm:w-12 w-10 sm:h-12 h-8 bg-blue-750 rounded-full
+     shadow-2xl flex items-center justify-center text-grey text-sm sm:text-base text-center font-bold font-overpass
+      hover:bg-orange hover:text-blue-900`;
 
     // Set the text content to the number
     button.textContent = i;
@@ -19,13 +21,13 @@ for (let i = 1; i <= 5; i++) {
 
         // Reset the previously selected button's color, if any
         if (selectedButton) {
-            selectedButton.classList.remove('bg-white', 'text-blue-900');
+            selectedButton.classList.remove('!bg-white', '!text-blue-900');
             selectedButton.classList.add('bg-blue-750', 'text-grey');
         }
 
         // Change the clicked button's color
         button.classList.remove('bg-blue-750', 'text-grey');
-        button.classList.add('bg-white', 'text-blue-900');
+        button.classList.add('!bg-white', '!text-blue-900');
 
         // Set the selected button reference
         selectedButton = button;
